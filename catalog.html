@@ -13,7 +13,7 @@
       <a><img src="#" width="154" height="64" alt="Логотип магазина Глэйси"></a>
       <ul>
         <li><a href="catalog.html">Каталог</a>
-          <ul>
+          <ul class="modal modal-nav">
             <li><a href="#">Новинки</a></li>
             <li><a href="catalog.html">Сливочное</a></li>
             <li><a href="#">Щербеты</a></li>
@@ -24,13 +24,12 @@
         <li><a href="shipping-payment.html">Доставка и оплата</a></li>
         <li><a href="info.html">О Компании</a></li>
       </ul>
-
       <ul>
-        <li><button type="button"><span>Поиск</span></button>
+        <li><button type="button"></button>
           <section>
             <h2>Поиск</h2>
             <form action="https://echo.htmlacademy.ru" method="get">
-              <labe for="icecream-search">Что ищем?</label>
+              <label for="icecream-search">Что ищем?</label>
                 <input id="icecream-search" type="text" name="icecream-search" placeholder="Крем-брюле">
             </form>
           </section>
@@ -57,36 +56,10 @@
           </section>
         </li>
 
-        <li><a href="shopping-cart.html">2 товара</a>
-          <section>
-            <table>
-              <caption>Корзина</caption>
-              <tr>
-                <td><button type="button"><span>Удалить</span></button></td>
-                <td><img src="#" width="33" height="33" alt="Сливочное мороженое оранжевого цвета с цитрусовым вкусом">
-                </td>
-                <td>Пломбир с апельсиновым джемом</td>
-                <td>1,5 кг х <span>200 руб.</span></td>
-                <td>300 руб.</td>
-              </tr>
-              <tr>
-                <td><button type="button"><span>Удалить</span></button></td>
-                <td><img src="#" width="33" height="33"
-                    alt="Сливочное мороженое ярко-розового цвета с бело-розовыми сердечками"></td>
-                <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                <td>1,5 кг х <span>300 руб.</span></td>
-                <td>450 руб.</td>
-              </tr>
-              <tr>
-                <td colspan="5">Итого: <span>750</span>руб.</td>
-              </tr>
-            </table>
-            <a href="#">Оформить заказ</a>
-          </section>
+        <li><a href="shopping-cart.html"><span>Корзина</span>Пусто</a></li>
         </li>
       </ul>
     </nav>
-
 
   </header>
 
