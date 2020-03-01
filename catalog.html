@@ -4,16 +4,18 @@
 <head>
   <meta charset="utf-8">
   <title>Каталог мороженого магазина Глэйси</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:700,900,500&subset=latin,cyrillic" rel="stylesheet"
+    type="text/css">
 </head>
 
 <body>
   <header>
+    <a href="index.html"><img src="#" width="154" height="64" alt="Логотип магазина Глэйси"></a>
     <nav>
-      <a><img src="#" width="154" height="64" alt="Логотип магазина Глэйси"></a>
+
       <ul>
         <li><a href="catalog.html">Каталог</a>
-          <ul class="modal modal-nav">
+          <ul>
             <li><a href="#">Новинки</a></li>
             <li><a href="catalog.html">Сливочное</a></li>
             <li><a href="#">Щербеты</a></li>
@@ -24,17 +26,17 @@
         <li><a href="shipping-payment.html">Доставка и оплата</a></li>
         <li><a href="info.html">О Компании</a></li>
       </ul>
+
       <ul>
         <li><button type="button"></button>
           <section>
             <h2>Поиск</h2>
             <form action="https://echo.htmlacademy.ru" method="get">
-              <label for="icecream-search">Что ищем?</label>
-                <input id="icecream-search" type="text" name="icecream-search" placeholder="Крем-брюле">
+              <label for="icecream-search">Что будем искать?</label>
+              <input id="icecream-search" type="text" name="icecream-search" placeholder="Крем-брюле">
             </form>
           </section>
         </li>
-
         <li><a href="login.html">Вход</a>
           <section>
             <h2>Личный кабинет</h2>
@@ -47,30 +49,32 @@
                 <label for="user-password">Пароль</label>
                 <input id="user-password" type="password" name="password" placeholder="••••••••">
               </p>
+
+              <button type="submit">Войти</button>
+
               <p>
                 <a href="#">Забыли пароль?</a>
                 <a href="#">Новая регистрация</a>
               </p>
-              <button type="submit">Войти</button>
             </form>
           </section>
         </li>
-
         <li><a href="shopping-cart.html"><span>Корзина</span>Пусто</a></li>
-        </li>
       </ul>
     </nav>
 
-  </header>
-
-  <main>
     <section>
-      <h2>Контакты</h2>
+      <h2>Время работы, телефон</h2>
       <p>
         <span>С 10 до 20, ежедневно</span>
         <a href="tel:88124502525">8 812 450-25-25</a>
       </p>
     </section>
+
+  </header>
+
+  <main>
+    <h1>Каталог сливочного мороженого</h1>
 
     <ul>
       <li><a href="index.html">Главная</a></li>
@@ -168,7 +172,7 @@
           <a href="#">
             <img src="#" width="267" height="267" alt="">
             <span>355 &#8381;/кг</span>
-            <h3">Сливочное с кусочками черного шоколада</h3>
+            <h3>Сливочное с кусочками черного шоколада</h3>
           </a>
           <button type="button">Быстрый просмотр</button>
         </li>
@@ -176,7 +180,7 @@
           <a href="#">
             <img src="#" width="267" height="267" alt="">
             <span>420 &#8381;/кг</span>
-            <h3">Сливочное с мятным сиропом</h3>
+            <h3>Сливочное с мятным сиропом</h3>
           </a>
           <button type="button">Быстрый просмотр</button>
         </li>
@@ -219,7 +223,7 @@
       </a>
       Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2019
     </p>
-    </div>
+    
   </footer>
 </body>
 
