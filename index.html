@@ -49,11 +49,11 @@
               <form action="https://echo.htmlacademy.ru" method="post">
                 <p>
                   <label for="user-login">Логин</label>
-                  <input id="user-login" type="email" name="login" placeholder="email@example.com">
+                  <input id="user-login" type="email" name="user-login" placeholder="email@example.com">
                 </p>
                 <p>
                   <label for="user-password">Пароль</label>
-                  <input id="user-password" type="password" name="password" placeholder="••••••••">
+                  <input id="user-password" type="password" name="user-password" placeholder="••••••••">
                 </p>
 
                 <button type="submit">Войти</button>
@@ -212,18 +212,23 @@
         </div>
       </article>
 
-<!--       <section>
-        <h2>Наш адрес на карте</h2>
-        <img src="#" width="1200" height="428" alt="Мы находимся по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      <section>
+        <h2>Как до нас добраться?</h2>
+        <img src="#" width="1200" height="430"
+          alt="Офис компании по адресу ул. Большая Конюшенная 19/8, г. Санкт-Петербург">
         <div>
-          <p>Адрес главного офиса и офлайн-магазина:</p>
-          <p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-          <p>Для заказов по телефону:</p>
-          <a href="tel:88124502525">8 812 450-25-25</a>
-          <p>(с 10 до 20 ежедневно)</p>
-          <a href="#">Форма обратной связи</a>
+          <p>
+            Адрес главного офиса
+            и офлайн-магазина:
+            <b> ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+          </p>
+          <p>Для заказов по телефону:
+            <a href="tel:+88124502525">8 812 450-25-25</a>
+            (с 10 до 20 ежедневно)
+          </p>
+          <a href="feedback.html">Форма обратной связи</a>
         </div>
-      </section> -->
+      </section>
 
     </main>
 
@@ -263,6 +268,27 @@
         Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2019
       </p>
     </footer>
+
+    <section>
+      <h2>Форма обратной связи</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <p>Мы обязательно вам ответим!</p>
+        <p>
+        <label for="feedback-login">Имя Фамилия</label>
+        <input type="text" name="feedback-login" id="feedback-login" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="feedback-email">Почта</label>
+          <input type="email" name="feedback-email" id="feedback-email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="feedback-comment">Комментарий</label>
+          <textarea name="feedback-comment" id="feedback-comment" rows="5" placeholder="В свободной форме"></textarea>
+        </p>
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
+
   </div>
 </body>
 
