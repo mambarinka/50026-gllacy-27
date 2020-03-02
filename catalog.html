@@ -59,7 +59,33 @@
             </form>
           </section>
         </li>
-        <li><a href="shopping-cart.html"><span>Корзина</span>Пусто</a></li>
+        <li><a href="shopping-cart.html">2 товара</a>
+          <section>
+            <table>
+              <caption>Корзина</caption>
+              <tr>
+                <td><button type="button"><span>Удалить</span></button></td>
+                <td><img src="#" width="33" height="33" alt="Сливочное мороженое оранжевого цвета с цитрусовым вкусом">
+                </td>
+                <td>Пломбир с апельсиновым джемом</td>
+                <td>1,5 кг х <span>200 руб.</span></td>
+                <td>300 руб.</td>
+              </tr>
+              <tr>
+                <td><button type="button"><span>Удалить</span></button></td>
+                <td><img src="#" width="33" height="33"
+                    alt="Сливочное мороженое ярко-розового цвета с бело-розовыми сердечками"></td>
+                <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                <td>1,5 кг х <span>300 руб.</span></td>
+                <td>450 руб.</td>
+              </tr>
+              <tr>
+                <td colspan="5">Итого: <span>750</span>руб.</td>
+              </tr>
+            </table>
+            <a href="#">Оформить заказ</a>
+          </section>
+        </li>
       </ul>
     </nav>
 
@@ -83,6 +109,23 @@
     </ul>
 
     <h1>Сливочное мороженое</h1>
+
+    <section>
+      <h2>Сортировка и фильтр мороженого</h2>
+
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <fieldset>
+          <legend>Сортировка:</legend>
+          <select name="sorting">
+            <option value="popular">по популярности</option>
+            <option value="inexpensive">сначала недорогие</option>
+            <option value="expensive">сначала дорогие</option>
+            <option value="fat">по жирности</option>
+          </select>
+        </fieldset>
+
+      </form>
+    </section>
 
     <section>
       <h2>Список сливочного мороженого</h2>
@@ -223,7 +266,7 @@
       </a>
       Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2019
     </p>
-    
+
   </footer>
 </body>
 
