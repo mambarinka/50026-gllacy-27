@@ -579,6 +579,13 @@ input[type="radio"].visually-hidden {
 
 /* ХЛЕБНЫЕ КРОШКИ В КАТАЛОГЕ */
 
+.inner-page h1 {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
 .breadcrumbs {
   padding: 0;
   margin: 0;
@@ -597,7 +604,7 @@ input[type="radio"].visually-hidden {
 
   position: absolute;
   top: 8px;
-  left: 5px;
+  right: -20px;
 }
 
 .breadcrumbs a {
@@ -624,6 +631,153 @@ input[type="radio"].visually-hidden {
 
 .breadcrumbs-current::after {
   display: none;
+}
+
+/* СОРТИРОВКА И ФИЛЬТРЫ */
+
+.sorting-filtres fieldset {
+  border: none;
+}
+
+.sorting-filtres legend {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.sorting-cover,
+.filter-cover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.sorting-filtres select[name="sorting"] {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #ffffff;
+
+  background-image: url("../img/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+
+.sorting-filtres select[name="sorting"]:hover,
+.sorting-filtres select[name="sorting"]:focus {
+  color: #323232;
+
+  background-image: url("../img/icon-down-dir.svg");
+}
+
+.sorting option {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+}
+
+.price-controls label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  vertical-align: top;
+}
+
+.price-controls input { 
+  width: 45px; 
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {  
+    position: relative;
+  
+    box-sizing: border-box;
+    width: 220px;
+    height: 37px;
+  }
+
+.range-controls .scale {
+  height: 4px;
+
+  background: rgba(248, 247, 244, 0.5);
+}
+
+.range-controls .bar {
+  width: 55%;
+  height: 4px;
+  margin-left: 22px;
+
+  background: rgb(248, 247, 244);
+}
+
+.range-toggle {
+  position: absolute;
+  top: -8px;
+  left: 0;
+
+  width: 4px;
+  height: 4px;
+  padding: 2px;
+
+  border: 8px solid rgb(255, 255, 255);
+  background-color: rgb(171,171,171);
+  border-radius: 50%;
+}
+
+
+.range-controls .range-toggle:hover {
+  top: -8px;
+
+  border-width: 10px;
+}
+
+.range-controls .range-toggle-min {
+  left: 22px;
+}
+
+.range-controls .range-toggle-min:hover {
+  left: 20px;
+}
+
+.range-controls .range-toggle-max {
+  left: 132px;
+}
+
+.range-controls .range-toggle-max:hover {
+  left: 130px;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
 }
 
 /* ПОДВАЛ */

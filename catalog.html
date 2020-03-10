@@ -9,7 +9,7 @@
   <link href="css/style.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="inner-page">
   <div class="container">
     <header class="main-header">
       <a class="main-header-logo" href="index.html"><img src="img/logo.svg" width="154" height="64"
@@ -129,7 +129,6 @@
     </header>
 
     <main>
-      <h1 class="visually-hidden">Каталог сливочного мороженого</h1>
 
       <ul class="breadcrumbs">
         <li><a href="index.html">Главная</a></li>
@@ -137,13 +136,15 @@
         <li class="breadcrumbs-current">Сливочное</li>
       </ul>
 
+      <h1>Сливочное мороженое</h1>
+
       <section>
         <h2 class="visually-hidden">Сортировка и фильтр мороженого</h2>
 
-        <form action="https://echo.htmlacademy.ru" method="get">
-          <fieldset>
+        <form class="sorting-filtres" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="sorting">
             <legend>Сортировка:</legend>
-            <select name="sorting">
+            <select class="sorting-cover" name="sorting">
               <option value="popular">по популярности</option>
               <option value="inexpensive">сначала недорогие</option>
               <option value="expensive">сначала дорогие</option>
@@ -151,25 +152,28 @@
             </select>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="filter-range">
             <legend>Цена:</legend>
-            <!--   взяла по типу слайдера из демки по седоне -->
-            <div class="price-controls">
-              <label class="min-price"><input type="number" name="min-price" value="100">руб. &ndash;</label>
-              <label class="max-price"><input type="number" name="max-price" value="500">руб.</label>
-            </div>
-            <div class="range-controls">
-              <div class="scale">
-                <div class="bar"></div>
+            <div class="filter-cover">
+              <div class="price-controls">
+                <label class="min-price"><input type="number" name="min-price" value="100">руб. &ndash;</label>
+                <label class="max-price"><input type="number" name="max-price" value="500">руб.</label>
               </div>
-              <button class="range-toggle range-toggle-min" type="button">Изменить минимальную цену</button>
-              <button class="range-toggle range-toggle-max" type="button">Изменить максимальную цену</button>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <button class="range-toggle range-toggle-min" aria-label="Изменить минимальную цену"
+                  type="button"></button>
+                <button class="range-toggle range-toggle-max" aria-label="Изменить максимальную цену"
+                  type="button"></button>
+              </div>
             </div>
           </fieldset>
 
           <fieldset>
             <legend>Жирность:</legend>
-            <ul>
+            <ul class="filter-cover">
               <li>
                 <input id="filter-fat-0" type="radio" name="filter-fat" value="0%">
                 <label for="filter-fat-0">0%</label>
@@ -191,7 +195,7 @@
 
           <fieldset>
             <legend>Наполнители:</legend>
-            <ul>
+            <ul class="filter-cover">
               <li>
                 <input type="checkbox" name="topping-chocolate" id="topping-chocolate" checked />
                 <label for="topping-chocolate">Шоколадные</label>
