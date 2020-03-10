@@ -142,6 +142,11 @@ input[type="radio"].visually-hidden {
   background: rgba(255, 255, 255, 0.2);
 }
 
+.site-navigation-current>a::after {
+  content: "";
+  background: none;
+}
+
 .site-navigation-item>a:hover,
 .site-navigation-item>a:focus {
   padding: 9px 13px 11px;
@@ -155,6 +160,15 @@ input[type="radio"].visually-hidden {
   color: #323232;
   box-shadow: inset 0px 2px 1px 0 #696969;
   background-color: #ededed;
+  border-radius: 25px;
+}
+
+.site-navigation-current>a,
+.site-navigation-current>a:hover,
+.site-navigation-current>a:focus,
+.site-navigation-current>a:active {
+  color: #ffffff;
+  background-color: #d07058;
   border-radius: 25px;
 }
 
@@ -190,6 +204,18 @@ input[type="radio"].visually-hidden {
 .user-navigation .button-cart:focus {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.user-navigation .button-full-cart,
+.user-navigation .button-full-cart:hover,
+.user-navigation .button-full-cart:focus,
+.user-navigation .button-full-cart:active {
+  color: #323232;
+  background-color: rgb(248, 247, 244, 0.99);
+}
+
+.shopping-cart {
+  display: none;
 }
 
 .contacts span {
@@ -466,11 +492,6 @@ input[type="radio"].visually-hidden {
   text-decoration: underline;
 }
 
-.blog-news a:hover,
-.blog-news a:focus {
-  
-}
-
 /* ПОДПИСКА */
 
 .subscription {
@@ -503,18 +524,43 @@ input[type="radio"].visually-hidden {
 
 .gllacy-map {
   position: relative;
+
+  width: 100vw;
+  min-height: 430px;
+  ;
+  text-align: center;
   background-color: #e3dbc3;
+}
+
+.gllacy-map img {
+  position: relative;
+  z-index: 1;
+  width: 100vw;
+}
+
+.gllacy-map img::before {
+  position: absolute;
+  content: url("../img/pin.svg");
+  width: 80px;
+  height: 140px;
+  top: calc(50% + 138px);
+
+  left: 0;
+  z-index: 100;
 }
 
 .wrapper-contacts {
   position: absolute;
-  top: 63px;
-  left: 871px;
+  z-index: 10;
+  width: 302px;
+  top: calc(50% - 151px);
+  right: calc(50vw - 690px);
 
   font-size: 14px;
   line-height: 20px;
   color: #323232;
   text-align: left;
+
 
   background-color: rgba(255, 255, 255, 0.98);
 }
@@ -529,6 +575,55 @@ input[type="radio"].visually-hidden {
 .wrapper-contacts .button {
   color: #ffffff;
   padding: 13px 27px 13px 28px;
+}
+
+/* ХЛЕБНЫЕ КРОШКИ В КАТАЛОГЕ */
+
+.breadcrumbs {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.breadcrumbs li {
+  position: relative;
+
+  margin-right: 42px;
+}
+
+.breadcrumbs li::after {
+  content: "»";
+
+  position: absolute;
+  top: 8px;
+  left: 5px;
+}
+
+.breadcrumbs a {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus,
+.breadcrumbs a:active {
+  color: #ffbc9e;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+}
+
+.breadcrumbs-current {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.breadcrumbs-current::after {
+  display: none;
 }
 
 /* ПОДВАЛ */
@@ -573,7 +668,7 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
   font-weight: 400;
   color: #ffffff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .information-item a:first-child {
@@ -586,6 +681,16 @@ input[type="radio"].visually-hidden {
   font-weight: 400;
   color: #fefefe;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.information-list a:hover,
+.information-list a:focus,
+.information-list a:active,
+.copyright a:hover:last-child,
+.copyright a:focus:last-child,
+.copyright a:active:last-child {
+  color: #ffbc9e;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
 /* ФОРМА ОБРАТНОЙ СВЯЗИ */

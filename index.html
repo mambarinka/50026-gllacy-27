@@ -15,13 +15,13 @@
   <input class="visually-hidden" type="radio" id="product-2" name="toggle">
   <input class="visually-hidden" type="radio" id="product-3" name="toggle">
   <div class="site-wrapper">
-    <div class="container">
-      <header>
+    <header>
+      <div class="container">
         <a class="main-header-logo"><img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глэйси"></a>
 
         <nav class="main-navigation">
           <ul class="site-navigation">
-            <li class="site-navigation-item"><a class="button-nav" href="catalog.html">Каталог</a>
+            <li class="site-navigation-item"><a class="button-nav" href="#">Каталог</a>
               <ul class="drop-down-list">
                 <li><a href="#">Новинки</a></li>
                 <li><a href="catalog.html">Сливочное</a></li>
@@ -105,10 +105,11 @@
             <a href="tel:88124502525">8 812 450-25-25</a>
           </p>
         </section>
+      </div>
+    </header>
 
-      </header>
-
-      <main>
+    <main>
+      <div class="container">
         <h1 class="visually-hidden">Магазин Глэйси — магазин по продаже мороженого</h1>
 
         <!--  скопировала все из демки -->
@@ -248,28 +249,30 @@
             </form>
           </div>
         </article>
+      </div>
 
-        <section class="gllacy-map">
-          <h2 class="visually-hidden">Как до нас добраться?</h2>
-          <img src="img/map.jpg" width="1200" height="430"
-            alt="Офис компании по адресу ул. Большая Конюшенная 19/8, г. Санкт-Петербург">
-          <div class="wrapper-contacts">
-            <p>
-              Адрес главного офиса
-              и офлайн-магазина:
-              <b> ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
-            </p>
-            <p>Для заказов по телефону:
-              <a href="tel:+88124502525">8 812 450-25-25</a>
-              (с 10 до 20 ежедневно)
-            </p>
-            <a class="button" href="feedback.html">Форма обратной связи</a>
-          </div>
-        </section>
+      <section class="gllacy-map">
+        <h2 class="visually-hidden">Как до нас добраться?</h2>
+        <img src="img/map.jpg" width="1200" height="430"
+          alt="Офис компании по адресу ул. Большая Конюшенная 19/8, г. Санкт-Петербург">
+        <div class="wrapper-contacts">
+          <p>
+            Адрес главного офиса
+            и офлайн-магазина:
+            <b> ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+          </p>
+          <p>Для заказов по телефону:
+            <a href="tel:+88124502525">8 812 450-25-25</a>
+            (с 10 до 20 ежедневно)
+          </p>
+          <a class="button" href="feedback.html">Форма обратной связи</a>
+        </div>
+      </section>
 
-      </main>
+    </main>
 
-      <footer class="footer">
+    <footer class="footer">
+      <div class="container">
         <ul class="socialmedia-list">
           <li class="socialmedia-item">
             <a class="socialmedia-button" href="#">
@@ -332,28 +335,28 @@
           </a>
           Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2019
         </p>
-      </footer>
+      </div>
+    </footer>
 
-      <section class="modal-feedback">
-        <h2 class="visually-hidden">Форма обратной связи</h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <p>Мы обязательно вам ответим!</p>
-          <p>
-            <label class="visually-hidden" for="feedback-login">Имя Фамилия</label>
-            <input type="text" name="feedback-login" id="feedback-login" placeholder="Имя Фамилия">
-          </p>
-          <p>
-            <label class="visually-hidden" for="feedback-email">Почта</label>
-            <input type="email" name="feedback-email" id="feedback-email" placeholder="email@example.com">
-          </p>
-          <p>
-            <label class="visually-hidden" for="feedback-comment">Комментарий</label>
-            <textarea name="feedback-comment" id="feedback-comment" rows="5" placeholder="В свободной форме"></textarea>
-          </p>
-          <button type="submit">Отправить</button>
-        </form>
-      </section>
-    </div>
+    <section class="modal-feedback">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <p>Мы обязательно вам ответим!</p>
+        <p>
+          <label class="visually-hidden" for="feedback-login">Имя Фамилия</label>
+          <input type="text" name="feedback-login" id="feedback-login" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label class="visually-hidden" for="feedback-email">Почта</label>
+          <input type="email" name="feedback-email" id="feedback-email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label class="visually-hidden" for="feedback-comment">Комментарий</label>
+          <textarea name="feedback-comment" id="feedback-comment" rows="5" placeholder="В свободной форме"></textarea>
+        </p>
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
   </div>
 </body>
 
