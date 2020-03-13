@@ -20,9 +20,9 @@
 
         <nav class="main-navigation">
           <ul class="site-navigation">
-            <li class="site-navigation-item"><a class="button-nav" href="#">Каталог</a>
+            <li class="site-navigation-item site-navigation-catalog"><a class="button-nav" href="#">Каталог</a>
               <ul class="drop-down-list">
-                <li><a href="#">Новинки</a></li>
+                <li><a class="new-items" href="#">Новинки</a></li>
                 <li><a href="catalog.html">Сливочное</a></li>
                 <li><a href="#">Щербеты</a></li>
                 <li><a href="#">Фруктовый лед</a></li>
@@ -35,7 +35,7 @@
           </ul>
 
           <ul class="user-navigation">
-            <li><a class="button-nav button-search" href="search.html">
+            <li class="user-navigation-item user-navigation-search"><a class="button-nav button-search" href="search.html">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17"
                   height="17" viewBox="0 0 17 17">
                   <path fill="#fff"
@@ -51,7 +51,7 @@
                 </form>
               </section>
             </li>
-            <li><a class="button-nav button-login" href="login.html">
+            <li class="user-navigation-item user-navigation-login"><a class="button-nav button-login" href="login.html">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21"
                   height="19" viewBox="0 0 21 19">
                   <g fill="#fff">
@@ -83,7 +83,7 @@
                 </form>
               </section>
             </li>
-            <li><a class="button-nav button-cart" href="shopping-cart.html">
+            <li class="user-navigation-item"><a class="button-nav button-cart" href="shopping-cart.html">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
                   <g fill="#FFF">
                     <path
@@ -92,7 +92,7 @@
                     <circle cx="15.984" cy="18" r="2" />
                   </g>
                 </svg>
-                <span class="visually-hidden">Корзина</span>Пусто</a>
+                <span aria-label="Корзина">Пусто</span></a>
             </li>
           </ul>
         </nav>

@@ -107,7 +107,7 @@ input[type="radio"].visually-hidden {
 .main-header .container {
   display: flex;
   flex-wrap: wrap;
-  outline: 3px solid red;
+  align-items: flex-start;
 }
 
 .main-header-logo {
@@ -115,7 +115,6 @@ input[type="radio"].visually-hidden {
   width: 154px;
   height: 64px;
   padding-top: 10px;
-  outline: 3px solid orange;
 }
 
 .main-navigation {
@@ -125,7 +124,6 @@ input[type="radio"].visually-hidden {
   padding-top: 21px;
   line-height: 18px;
   font-weight: 700;
-  outline: 3px solid yellow;
 }
 
 .site-navigation,
@@ -140,7 +138,6 @@ input[type="radio"].visually-hidden {
   display: flex;
   width: 400px;
   padding-left: 5px;
-  outline: 3px solid green;
 }
 
 .button-nav {
@@ -149,6 +146,7 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation-item {
+  position: relative;
   padding: 1px 2px;
 }
 
@@ -196,22 +194,24 @@ input[type="radio"].visually-hidden {
   border-radius: 25px;
 }
 
-.drop-down-list,
-.popup-search,
-.popup-login {
-  display: none;
-}
-
 .user-navigation {
   display: flex;
   justify-content: flex-end;
   flex-grow: 1;
   width: 280px;
-  outline: 3px solid blue;
+}
+
+.user-navigation-item {
+  position: relative;
+  padding: 0px 3px;
 }
 
 .user-navigation a {
-  padding: 9px 13px 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 16px;
   font-weight: 500;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.2);
@@ -222,7 +222,19 @@ input[type="radio"].visually-hidden {
 .user-navigation a:focus {
   color: #323232;
   background-color: #f8f7f4;
-  padding: 9px 13px 11px;
+}
+
+.user-navigation-item span {
+  padding-left: 4px;
+}
+
+.button-search {
+  padding: 7px;
+}
+
+.button-login,
+.button-cart {
+  padding: 7px 19px;
 }
 
 .button-search:hover path,
@@ -253,7 +265,12 @@ input[type="radio"].visually-hidden {
 .contacts {
   width: 200px;
   margin-left: auto;
-  outline: 3px solid purple;
+  text-align: right;
+}
+
+.contacts p {
+  margin: 0;
+  margin-top: -4px;
 }
 
 .contacts span {
@@ -267,6 +284,48 @@ input[type="radio"].visually-hidden {
   line-height: 24px;
   font-weight: 700;
   color: #ffffff;
+}
+
+.drop-down-list,
+.popup-search,
+.popup-login {
+    display: none;
+  position: absolute;
+  top: 38px;
+  left: -5px;
+}
+
+.site-navigation-catalog:hover .drop-down-list,
+.user-navigation-search:hover .popup-search,
+.user-navigation-login:hover .popup-login {
+  display: block;
+}
+
+.drop-down-list {
+  width: 103px;
+  padding: 11px 21px;
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+  border-radius: 5px;
+}
+
+.drop-down-list li {
+  padding-bottom: 13px;
+}
+
+.drop-down-list li:first-child{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.drop-down-list a {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+}
+
+.drop-down-list .new-items {
+  font-weight: 700;
 }
 
 /* СЛАЙДЕР */
