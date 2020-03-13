@@ -289,10 +289,11 @@ input[type="radio"].visually-hidden {
 .drop-down-list,
 .popup-search,
 .popup-login {
-    display: none;
+  /* display: none; */
   position: absolute;
   top: 38px;
   left: -5px;
+  z-index: 1;
 }
 
 .site-navigation-catalog:hover .drop-down-list,
@@ -313,7 +314,7 @@ input[type="radio"].visually-hidden {
   padding-bottom: 13px;
 }
 
-.drop-down-list li:first-child{
+.drop-down-list li:first-child {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
