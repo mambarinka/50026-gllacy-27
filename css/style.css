@@ -24,6 +24,11 @@ a {
 
 /* ОБЩИЕ СТИЛИ */
 
+.container {
+  width: 1146px;
+  margin: 0 auto;
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -97,22 +102,30 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/slide-3.png");
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 27px;
-}
-
 /* HEADER  */
 
+.main-header .container {
+  display: flex;
+  flex-wrap: wrap;
+  outline: 3px solid red;
+}
+
 .main-header-logo {
+  display: block;
   width: 154px;
   height: 64px;
+  padding-top: 10px;
+  outline: 3px solid orange;
 }
 
 .main-navigation {
+  display: flex;
+  width: 990px;
+  margin-left: auto;
+  padding-top: 21px;
   line-height: 18px;
   font-weight: 700;
+  outline: 3px solid yellow;
 }
 
 .site-navigation,
@@ -123,13 +136,24 @@ input[type="radio"].visually-hidden {
   padding: 0;
 }
 
+.site-navigation {
+  display: flex;
+  width: 400px;
+  padding-left: 5px;
+  outline: 3px solid green;
+}
+
 .button-nav {
   display: inline-block;
   vertical-align: middle;
 }
 
+.site-navigation-item {
+  padding: 1px 2px;
+}
+
 .site-navigation-item>a {
-  padding: 9px 13px 11px;
+  padding: 8px 13px 7px;
   color: #ffffff;
 }
 
@@ -149,14 +173,14 @@ input[type="radio"].visually-hidden {
 
 .site-navigation-item>a:hover,
 .site-navigation-item>a:focus {
-  padding: 9px 13px 11px;
+  padding: 8px 13px 7px;
   color: #323232;
   background-color: #f7f6f3;
   border-radius: 25px;
 }
 
 .site-navigation-item>a:active {
-  padding: 9px 13px 11px;
+  padding: 8px 13px 7px;
   color: #323232;
   box-shadow: inset 0px 2px 1px 0 #696969;
   background-color: #ededed;
@@ -176,6 +200,14 @@ input[type="radio"].visually-hidden {
 .popup-search,
 .popup-login {
   display: none;
+}
+
+.user-navigation {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  width: 280px;
+  outline: 3px solid blue;
 }
 
 .user-navigation a {
@@ -216,6 +248,12 @@ input[type="radio"].visually-hidden {
 
 .shopping-cart {
   display: none;
+}
+
+.contacts {
+  width: 200px;
+  margin-left: auto;
+  outline: 3px solid purple;
 }
 
 .contacts span {
@@ -388,6 +426,10 @@ input[type="radio"].visually-hidden {
 .bestseller-item h3,
 .catalog-item h3 {
   display: inline-block;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -913,8 +955,7 @@ input[type="radio"].visually-hidden {
 
 .pagination-item-back a:hover,
 .pagination-item-back a:focus,
-.pagination-item-back a:active
-.pagination-item-next a:hover,
+.pagination-item-back a:active .pagination-item-next a:hover,
 .pagination-item-next a:focus,
 .pagination-item-next a:active {
   background-color: transparent;
@@ -922,7 +963,8 @@ input[type="radio"].visually-hidden {
 
 .back-disabled svg {
   fill: rgba(255, 255, 255, 0.2);
-  transform: scaleX(1);transform: scaleX(-1);
+  transform: scaleX(1);
+  transform: scaleX(-1);
 
 }
 
