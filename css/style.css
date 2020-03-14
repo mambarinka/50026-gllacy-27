@@ -451,6 +451,12 @@ input[type="radio"].visually-hidden {
   text-decoration: underline;
 }
 
+.restore a:hover,
+.restore a:focus,
+.restore a:active {
+  color: #e84d37;
+}
+
 /* СЛАЙДЕР */
 
 .slider {
@@ -710,6 +716,7 @@ input[type="radio"].visually-hidden {
 
 .features {
   padding: 25px 26px 25px 20px;
+  margin-bottom: 40px;
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
@@ -775,7 +782,15 @@ input[type="radio"].visually-hidden {
 
 /* НОВОЕ В БЛОГЕ */
 
+.index-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
 .blog-news {
+  width: 560px;
+  padding: 16px 19px;
+  margin-right: 26px;
   background-color: #ffffff;
   background-image: url("../img/strawberry-bg.jpg");
   background-repeat: no-repeat;
@@ -807,6 +822,8 @@ input[type="radio"].visually-hidden {
 /* ПОДПИСКА */
 
 .subscription {
+  width: 560px;
+  padding: 16px 19px;
   box-sizing: border-box;
   width: 560px;
   min-height: 220px;
