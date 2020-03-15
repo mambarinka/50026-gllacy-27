@@ -785,11 +785,13 @@ input[type="radio"].visually-hidden {
 .index-columns {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 39px;
 }
 
 .blog-news {
-  width: 560px;
-  padding: 16px 19px;
+  width: 534px;
+  padding: 22px 19px;
   margin-right: 26px;
   background-color: #ffffff;
   background-image: url("../img/strawberry-bg.jpg");
@@ -799,6 +801,8 @@ input[type="radio"].visually-hidden {
 }
 
 .blog-news h2 {
+  margin: 0;
+  margin-bottom: 5px;
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
@@ -806,6 +810,9 @@ input[type="radio"].visually-hidden {
 }
 
 .blog-news a {
+  display: block;
+  margin-bottom: 58px;
+  width: 282px;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
@@ -823,10 +830,6 @@ input[type="radio"].visually-hidden {
 
 .subscription {
   width: 560px;
-  padding: 16px 19px;
-  box-sizing: border-box;
-  width: 560px;
-  min-height: 220px;
   padding: 5px;
   color: #5a5a5a;
   background-color: #92cdff;
@@ -837,51 +840,60 @@ input[type="radio"].visually-hidden {
 }
 
 .wrapper-subscription {
+  padding: 28px 20px 35px 20px;
   background-color: #f8f7f4;
   border-radius: 15px;
 }
 
 .wrapper-subscription p {
   margin: 0;
+  margin-bottom: 35px;
+}
+
+.subscription-form input {
+  box-sizing: border-box;
+  width: 368px;
+  margin-right: 7px;
+  padding: 11px;
 }
 
 .subscription .button {
-  padding: 14px 19px 13px 19px;
+  padding: 10px 19px;
 }
 
 /* КАРТА И КОНТАКТЫ */
 
 .gllacy-map {
   position: relative;
-
   width: 100vw;
   text-align: center;
   background-color: #e3dbc3;
 }
 
 .gllacy-map img {
+  display: block;
   position: relative;
-  z-index: 1;
   width: 100vw;
+  height: 430px;
 }
 
-.gllacy-map img::before {
+.gllacy-map .wrapper-img::before {
   position: absolute;
   content: url("../img/pin.svg");
   width: 80px;
   height: 140px;
-  top: calc(50% + 138px);
-
-  left: 0;
+  top: 11vw;
+  left: 24vw;
   z-index: 10;
 }
 
 .wrapper-contacts {
   position: absolute;
   z-index: 10;
-  width: 302px;
-  top: calc(50% - 151px);
-  right: calc(50vw - 690px);
+  width: 252px;
+  padding: 29px 25px;
+  top: calc(50% - 152px);
+  right: calc(50vw - 565px);
 
   font-size: 14px;
   line-height: 20px;
@@ -891,7 +903,22 @@ input[type="radio"].visually-hidden {
   background-color: rgba(255, 255, 255, 0.98);
 }
 
-.wrapper-contacts a {
+.wrapper-contacts p {
+  width: 222px;
+  margin: 0;
+  margin-bottom: 19px;
+}
+
+.wrapper-contacts b {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.wrapper-contacts .phone-number {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 4px;
   font-size: 18px;
   line-height: 22px;
   font-weight: 700;
@@ -900,7 +927,8 @@ input[type="radio"].visually-hidden {
 
 .wrapper-contacts .button {
   color: #ffffff;
-  padding: 13px 27px 13px 28px;
+  padding: 11px 27px;
+  margin-top: 3px;
 }
 
 /* ХЛЕБНЫЕ КРОШКИ В КАТАЛОГЕ */
@@ -1227,7 +1255,8 @@ input[type="radio"].visually-hidden {
 
 .pagination-item-back a:hover,
 .pagination-item-back a:focus,
-.pagination-item-back a:active .pagination-item-next a:hover,
+.pagination-item-back a:active,
+.pagination-item-next a:hover,
 .pagination-item-next a:focus,
 .pagination-item-next a:active {
   background-color: transparent;
@@ -1237,22 +1266,43 @@ input[type="radio"].visually-hidden {
   fill: rgba(255, 255, 255, 0.2);
   transform: scaleX(1);
   transform: scaleX(-1);
-
 }
 
 /* ПОДВАЛ */
 
 .footer {
+  padding: 20px 27px;
   font-size: 12px;
   line-height: 18px;
   color: #fefefe;
 }
 
-.socialmedia-list,
-.information-list {
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socialmedia-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.socialmedia-list {
+  width: 194px;
+}
+
+.socialmedia-item {
+  width: 40px;
+  margin-right: 9px;
+  margin-bottom: 9px;
+}
+
+.socialmedia-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .socialmedia-button path {
@@ -1277,6 +1327,16 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
 }
 
+.information-list {
+  width: 341px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  outline: 3px solid black;
+}
+
 .information-list a {
   font-size: 13px;
   line-height: 18px;
@@ -1285,8 +1345,42 @@ input[type="radio"].visually-hidden {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.information-item:first-child a {
+.information-item {
+  outline: 3px solid blue;
+  position: relative;
+
+}
+
+.information-item:nth-child(odd) {
+  width: 140px;
+  padding-left: 20px;
+}
+
+.information-item:nth-child(even) {
+  width: 165px;
+}
+
+.information-item-shipper {
+  position: relative;
   font-weight: 700;
+}
+
+.information-item-shipper::before {
+  position: absolute;
+  content: url("../img/heart.svg");
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  width: 15px;
+  height: 13px;
+  font-weight: 700;
+}
+
+.copyright {
+  width: 190px;
+
+  outline: 3px solid black;
 }
 
 .copyright a:last-child {
