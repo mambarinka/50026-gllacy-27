@@ -30,7 +30,8 @@
         </ul>
 
         <ul class="user-navigation">
-          <li><a class="button-nav button-search" href="search.html">
+          <li class="user-navigation-item user-navigation-search"><a class="button-nav button-search"
+              href="search.html">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17"
                 viewBox="0 0 17 17">
                 <path fill="#fff"
@@ -40,13 +41,13 @@
             </a>
             <section class="popup-search">
               <h2 class="visually-hidden">Форма поиска</h2>
-              <form action="https://echo.htmlacademy.ru" method="get">
+              <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                 <label class="visually-hidden" for="icecream-search">Что будем искать?</label>
                 <input id="icecream-search" type="text" name="icecream-search" placeholder="Крем-брюле">
               </form>
             </section>
           </li>
-          <li><a class="button-nav button-login" href="login.html">
+          <li class="user-navigation-item user-navigation-login"><a class="button-nav button-login" href="login.html">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19"
                 viewBox="0 0 21 19">
                 <g fill="#fff">
@@ -59,7 +60,7 @@
             </a>
             <section class="popup-login">
               <h2 class="visually-hidden">Личный кабинет</h2>
-              <form action="https://echo.htmlacademy.ru" method="post">
+              <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                 <p>
                   <label class="visually-hidden" for="user-login">Логин</label>
                   <input id="user-login" type="email" name="login" placeholder="email@example.com">
@@ -69,16 +70,19 @@
                   <input id="user-password" type="password" name="password" placeholder="••••••••">
                 </p>
 
-                <button type="submit">Войти</button>
+                <div class="wrapper-restore">
+                  <button type="submit">Войти</button>
 
-                <p>
-                  <a href="#">Забыли пароль?</a>
-                  <a href="#">Новая регистрация</a>
-                </p>
+                  <p class="restore">
+                    <a href="#">Забыли пароль?</a>
+                    <a href="#">Новая регистрация</a>
+                  </p>
+                </div>
               </form>
             </section>
           </li>
-          <li><a class="button-nav button-cart button-full-cart" href="shopping-cart.html">
+          <li class="user-navigation-item user-navigation-cart"><a class="button-nav button-cart button-full-cart"
+              href="shopping-cart.html">
               <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
                 <path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z" />
                 <circle fill="#343434" cx="6.984" cy="18" r="2" />
@@ -86,33 +90,35 @@
                 <path fill="#343434"
                   d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z" />
               </svg>
-              <span class="visually-hidden">Корзина</span>2 товара</a>
+              <span><span class="visually-hidden">Корзина</span>2 товара</span></a>
 
             <section class="shopping-cart">
               <h2 class="visually-hidden">Содержание корзины</h2>
-              <table>
+              <table class="shopping-cart-table">
                 <tr>
-                  <td><button type="button"><span>Удалить</span></button></td>
-                  <td><img src="img/product-1-min.png" width="33" height="33"
+                  <td class="cell-1"><button class="button-cross" type="button"><span class="visually-hidden">Удалить</span></button></td>
+                  <td class="cell-2"><img src="img/product-1-min.png" width="33" height="33"
                       alt="Сливочное мороженое оранжевого цвета с цитрусовым вкусом">
                   </td>
-                  <td>Пломбир с апельсиновым джемом</td>
-                  <td>1,5 кг х <span>200 руб.</span></td>
-                  <td>300 руб.</td>
+                  <td class="cell-3">Пломбир с апельсиновым джемом</td>
+                  <td class="cell-4">1,5 кг х <span>200 руб.</span></td>
+                  <td class="cell-5">300 руб.</td>
                 </tr>
                 <tr>
-                  <td><button type="button"><span>Удалить</span></button></td>
-                  <td><img src="img/product-3-min.png" width="33" height="33"
+                  <td class="cell-1"><button class="button-cross" type="button"><span class="visually-hidden">Удалить</span></button></td>
+                  <td class="cell-2"><img src="img/product-3-min.png" width="33" height="33"
                       alt="Сливочное мороженое ярко-розового цвета с бело-розовыми сердечками"></td>
-                  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                  <td>1,5 кг х <span>300 руб.</span></td>
-                  <td>450 руб.</td>
+                  <td class="cell-3">Клубничный пломбир с присыпкой из&nbsp;белого шоколада</td>
+                  <td class="cell-4">1,5 кг х <span>300 руб.</span></td>
+                  <td class="cell-5">450 руб.</td>
                 </tr>
                 <tr>
-                  <td colspan="5">Итого: <span>750</span>руб.</td>
+                  <td class="cell-6" colspan="5">Итого:<span>750</span>руб.</td>
                 </tr>
               </table>
-              <a href="#">Оформить заказ</a>
+              <div class="wrapper-button-cart">
+              <a class="button" href="#">Оформить заказ</a>
+            </div>
             </section>
           </li>
         </ul>
@@ -122,7 +128,7 @@
         <h2 class="visually-hidden">Время работы, телефон</h2>
         <p>
           <span>С 10 до 20, ежедневно</span>
-          <a href="tel:88124502525">8 812 450-25-25</a>
+          <a href="tel:88124502525">8&nbsp;812 450-25-25</a>
         </p>
       </section>
 
@@ -337,16 +343,22 @@
         </ul>
         <ul class="pagination-list">
           <li class="pagination-item-back"><a class="back-disabled" href="#prev" aria-label="Назад">
-            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12"><path fill="#C1C6CE" d="M7.237 5.642L1.73.132c-.2-.197-.52-.197-.717 0s-.198.52 0 .717L6.163 6l-5.15 5.15c-.2.198-.2.52 0 .717.098.1.228.148.357.148.13 0 .26-.05.358-.148l5.51-5.51c.198-.197.198-.517 0-.715z"/></svg>
-          </a></li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
+                <path fill="#C1C6CE"
+                  d="M7.237 5.642L1.73.132c-.2-.197-.52-.197-.717 0s-.198.52 0 .717L6.163 6l-5.15 5.15c-.2.198-.2.52 0 .717.098.1.228.148.357.148.13 0 .26-.05.358-.148l5.51-5.51c.198-.197.198-.517 0-.715z" />
+                </svg>
+            </a></li>
           <li class="pagination-item pagination-item-current"><a>1</a></li>
           <li class="pagination-item"><a href="#">2</a></li>
           <li class="pagination-item"><a href="#">3</a></li>
           <li class="pagination-item"><a href="#">4</a></li>
           <li class="pagination-item"><a href="#">5</a></li>
           <li class="pagination-item-next"><a href="#next" aria-label="Вперед">
-            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12"><path fill="#ffffff" d="M7.237 5.642L1.73.132c-.2-.197-.52-.197-.717 0s-.198.52 0 .717L6.163 6l-5.15 5.15c-.2.198-.2.52 0 .717.098.1.228.148.357.148.13 0 .26-.05.358-.148l5.51-5.51c.198-.197.198-.517 0-.715z"/></svg>
-          </a></li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
+                <path fill="#ffffff"
+                  d="M7.237 5.642L1.73.132c-.2-.197-.52-.197-.717 0s-.198.52 0 .717L6.163 6l-5.15 5.15c-.2.198-.2.52 0 .717.098.1.228.148.357.148.13 0 .26-.05.358-.148l5.51-5.51c.198-.197.198-.517 0-.715z" />
+                </svg>
+            </a></li>
         </ul>
       </section>
     </main>
