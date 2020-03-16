@@ -111,6 +111,10 @@ input[type="radio"].visually-hidden {
   align-items: flex-start;
 }
 
+.inner-page .main-header {
+  margin-bottom: -22px;
+}
+
 .main-header-logo {
   display: block;
   width: 154px;
@@ -312,7 +316,7 @@ input[type="radio"].visually-hidden {
 }
 
 .shopping-cart {
-  display: block;
+  display: none;
   position: absolute;
   top: 38px;
   right: 1px;
@@ -1022,6 +1026,8 @@ input[type="radio"].visually-hidden {
 /* ХЛЕБНЫЕ КРОШКИ В КАТАЛОГЕ */
 
 .inner-page h1 {
+  margin: 0;
+  margin-bottom: 26px;
   font-size: 35px;
   line-height: 41px;
   font-weight: 700;
@@ -1031,22 +1037,24 @@ input[type="radio"].visually-hidden {
 .breadcrumbs {
   padding: 0;
   margin: 0;
+  margin-bottom: 2px;
 
   list-style: none;
 }
 
 .breadcrumbs li {
+  display: inline-block;
   position: relative;
 
-  margin-right: 42px;
+  margin-right: 17px;
 }
 
 .breadcrumbs li::after {
   content: "»";
 
   position: absolute;
-  top: 8px;
-  right: -20px;
+  top: 0px;
+  right: -15px;
 }
 
 .breadcrumbs a {
@@ -1077,11 +1085,23 @@ input[type="radio"].visually-hidden {
 
 /* СОРТИРОВКА И ФИЛЬТРЫ */
 
-.sorting-filtres fieldset {
-  border: none;
+.sorting-filtres-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 885px;
+  height: 171px;
+  /* временно  */
 }
 
-.sorting-filtres legend {
+.sorting-filtres fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: 2px solid blue;
+}
+
+.sorting-filtres-form legend {
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -1094,7 +1114,17 @@ input[type="radio"].visually-hidden {
   border-radius: 20px;
 }
 
-.sorting-filtres select[name="sorting"] {
+
+.sorting-filtres-form .sorting {
+  width: 196px;
+}
+
+.sorting legend {
+  padding-left: 16px;
+  padding-bottom: 6px;
+}
+
+.sorting select[name="sorting"] {
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -1109,19 +1139,24 @@ input[type="radio"].visually-hidden {
   appearance: none;
 }
 
-
-.sorting-filtres select[name="sorting"]:hover,
-.sorting-filtres select[name="sorting"]:focus {
+.sorting select[name="sorting"]:hover,
+.sorting select[name="sorting"]:focus {
   color: #323232;
 
   background-image: url("../img/icon-down-dir.svg");
 }
 
 .sorting option {
+  display: block;
+  padding: 10px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
   color: #323232;
+}
+
+.filter-range {
+  width: 222px;
 }
 
 .price-controls label {
@@ -1197,6 +1232,14 @@ input[type="radio"].visually-hidden {
 
 .range-controls .range-toggle-max:hover {
   left: 130px;
+}
+
+.filter-fat {
+  width: 417px;
+}
+
+.filter-topping {
+  width: 705px;
 }
 
 .filter-fat-list,
