@@ -708,6 +708,12 @@ input[type="radio"].visually-hidden {
 
 /* ХИТЫ ПРОДАЖ И КАТАЛОГ СЛИВОЧНОГО МОРОЖЕНОГО */
 
+.catalog {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 27px;
+  margin-bottom: 18px;
+}
+
 .bestseller-item span,
 .catalog-item span {
   position: absolute;
@@ -738,13 +744,17 @@ input[type="radio"].visually-hidden {
 .bestseller-item h3,
 .catalog-item h3 {
   display: inline-block;
+  width: 258px;
+  padding-left: 4px;
+  padding-top: 1px;
   margin: 0;
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
 }
 
-.bestseller-item div {
+.bestseller-item div,
+.catalog-item div {
   margin-bottom: 7px;
 }
 
@@ -756,6 +766,10 @@ input[type="radio"].visually-hidden {
   padding: 0;
 
   list-style: none;
+}
+
+.catalog-list {
+  margin-bottom: 44px;
 }
 
 .bestseller-item,
@@ -781,28 +795,45 @@ input[type="radio"].visually-hidden {
   z-index: 1;
 }
 
+.wrapper-button {
+  position: absolute;
+  top: -7px;
+  left: -14px;
+  z-index: 10;
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 0px 13px 81px;
+  background-color: rgba(248, 247, 244, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
+}
+
 .bestsellers .button,
 .catalog .button {
   position: absolute;
-  left: 50%;
-  margin-top: 11px;
-  margin-left: -90px;
-  z-index: 1;
-  display: none;
-  padding: 13px 17px;
+  bottom: 22px;
+  left: 16%;
+
+  padding: 10px 17px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
 }
 
-.bestseller-item:hover .button,
-.catalog-item:hover .button {
+.bestseller-item:hover .wrapper-button,
+.catalog-item:hover .wrapper-button {
   display: block;
+  z-index: 10;
 }
 
-.bestseller-item:hover,
+/* .bestseller-item:hover,
 .catalog-item:hover {
+  z-index: 200;
   border-radius: 5px;
   background-color: rgba(248, 247, 244, 0.2);
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-}
+} */
 
 /* ПРЕИМУЩЕСТВА */
 
@@ -1089,6 +1120,7 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   align-items: flex-start;
   width: 885px;
+  margin-bottom: 23px;
 }
 
 .sorting-filtres fieldset {
@@ -1258,15 +1290,17 @@ input[type="radio"].visually-hidden {
 .filter-topping-list {
   padding: 0;
   margin: 0;
-
+  padding-top: 7px;
+  padding-bottom: 7px;
   list-style: none;
 }
 
-.filter-fat-list,
+.filter-fat-list {
+  padding-left: 45px;
+}
+
 .filter-topping-list {
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-left: 12px;
+  padding-left: 47px;
 }
 
 .filter-fat legend {
@@ -1280,9 +1314,24 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-fat-item,
-.filter-topping-item{
+.filter-topping-item {
   display: inline-block;
-  outline: 2px solid green;
+}
+
+.filter-fat-item {
+  margin-right: 46px;
+}
+
+.filter-fat-item:last-child {
+  margin-right: 0;
+}
+
+.filter-topping-item {
+  margin-right: 50px;
+}
+
+.filter-topping-item:last-child {
+  margin-right: 0;
 }
 
 .filter-fat-item label {
@@ -1290,7 +1339,6 @@ input[type="radio"].visually-hidden {
   font-weight: 400;
 
   position: relative;
-  padding-right: 25px;
 
   display: block;
 
@@ -1303,7 +1351,6 @@ input[type="radio"].visually-hidden {
   font-weight: 400;
 
   position: relative;
-  padding-right: 25px;
 
   display: block;
 
@@ -1316,7 +1363,7 @@ input[type="radio"].visually-hidden {
 
   position: absolute;
   top: -1px;
-  left: 12px;
+  left: -33px;
 
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1327,8 +1374,8 @@ input[type="radio"].visually-hidden {
   content: "";
 
   position: absolute;
-  top: 0px;
-  left: 16px;
+  top: -1px;
+  left: -32px;
 
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1375,7 +1422,8 @@ input[type="radio"].visually-hidden {
 }
 
 .button-filter {
-  padding: 7px 26px 6px 26px;
+  padding: 5px 21px;
+  margin-top: 21px;
   line-height: 22px;
   font-weight: 500;
   text-shadow: none;
@@ -1406,11 +1454,17 @@ input[type="radio"].visually-hidden {
 /* ПАГИНАЦИЯ */
 
 .pagination-list {
-
+  display: flex;
+  justify-content: flex-end;
   padding: 0;
   margin: 0;
 
   list-style: none;
+}
+
+.pagination-item {
+  margin-left: 1px;
+  outline: 1px solid grey;
 }
 
 .pagination-item a {
@@ -1443,6 +1497,20 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
 }
 
+.pagination-item-back a,
+.pagination-item-next a {
+  position: relative;
+}
+
+.pagination-item svg {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  display: inline-block;
+  width: 8px;
+  height: 12px;
+}
+
 .pagination-item-back a:hover,
 .pagination-item-back a:focus,
 .pagination-item-back a:active,
@@ -1456,18 +1524,20 @@ input[type="radio"].visually-hidden {
   fill: rgba(255, 255, 255, 0.2);
   transform: scaleX(1);
   transform: scaleX(-1);
+  cursor: default;
 }
 
 /* ПОДВАЛ */
 
-.footer {
+.main-page .footer {
   padding: 19px 27px;
   font-size: 12px;
   line-height: 18px;
   color: #fefefe;
 }
 
-.footer .container {
+.footer .container,
+.inner-page .footer {
   display: flex;
   align-items: flex-start;
 }
@@ -1527,6 +1597,10 @@ input[type="radio"].visually-hidden {
   padding-top: 15px;
 }
 
+.inner-page .information-list {
+  padding-top: 12px;
+}
+
 .information-list a {
   font-size: 13px;
   line-height: 18px;
@@ -1537,7 +1611,12 @@ input[type="radio"].visually-hidden {
 
 .information-item {
   position: relative;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
+}
+
+.information-item {
+  margin-bottom: 0;
+  ;
 }
 
 .information-item:nth-child(odd) {
@@ -1571,11 +1650,14 @@ input[type="radio"].visually-hidden {
 
 .copyright p {
   margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
 }
 
 .copyright a:last-child {
   font-size: 12px;
-  line-height: 18px;
+  line-height: 16px;
   font-weight: 400;
   color: #fefefe;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
