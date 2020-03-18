@@ -5,7 +5,7 @@ var popup = document.querySelector('.modal-feedback');
 var close = popup.querySelector('.modal-close');
 
 var form = popup.querySelector('form');
-var name = popup.querySelector('[name="name"]');
+var nameFeedback = popup.querySelector('[name="name"]');
 var email = popup.querySelector('[name="email"]');
 var description = popup.querySelector('[name="description"]');
 
@@ -27,10 +27,10 @@ link.addEventListener('click', function (evt) {
   overlay.style.display = 'block';
   popup.classList.add('modal-show');
 
-  name.focus();
+  nameFeedback.focus();
 
   if (StorageName) {
-    name.value = StorageName;
+    nameFeedback.value = StorageName;
     email.focus();
   }
   if (StorageEmail) {
@@ -50,34 +50,18 @@ close.addEventListener('click', function (evt) {
 });
 
 form.addEventListener('submit', function (evt) {
-  if (!name.value || !email.value || !description.value) {
+  if (!nameFeedback.value || !email.value || !description.value) {
     evt.preventDefault();
     popup.classList.remove("modal-error");
     popup.offsetWidth = popup.offsetWidth;
     popup.classList.add('modal-error');
-    console.log("Нужно ввести имя, email и описание!");
   } else {
     if (isStorageSupport) {
-      localStorage.setItem('name', name.value);
+      localStorage.setItem('name', nameFeedback.value);
       localStorage.setItem('email', email.value);
     }
   }
 });
-
-/* formFeedback.addEventListener('submit', function(evt) {
-    if (!nameFeedback.value || !emailFeedback.value || !descriptionFeedback.value) {
-      evt.preventDefault();
-      modalFeedback.classList.remove("modal-error");
-      modalFeedback.offsetWidth = modalFeedback.offsetWidth;
-      modalFeedback.classList.add('modal-error');
-      console.error("Нужно ввести имя, email и описание!");
-    } else {
-      if (isStorageSupport) {
-        localStorage.setItem('name', nameFeedback.value);
-        localStorage.setItem('email', emailFeedback.value);
-      }
-    }
-  }); */
 
 window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
