@@ -276,7 +276,7 @@
             <a class="phone-number" href="tel:+88124502525">8&nbsp;812&nbsp;450-25-25</a>
             (с&nbsp;10&nbsp;до&nbsp;20&nbsp;ежедневно)
           </p>
-          <a class="button" href="feedback.html">Форма обратной связи</a>
+          <a class="button button-feedback" href="feedback.html">Форма обратной связи</a>
         </div>
       </section>
 
@@ -349,26 +349,34 @@
       </div>
     </footer>
 
+    <div class="modal-overlay"></div>
     <section class="modal-feedback">
-      <h2 class="visually-hidden">Форма обратной связи</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <p>Мы обязательно вам ответим!</p>
+      <h2 class="modal-title">Мы обязательно вам ответим!</h2>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
-          <label class="visually-hidden" for="feedback-login">Имя Фамилия</label>
-          <input type="text" name="feedback-login" id="feedback-login" placeholder="Имя Фамилия">
+          <label class="visually-hidden" for="feedback-name">Имя Фамилия</label>
+          <input class="form-control" id="feedback-name" type="text" name="name" placeholder="Имя Фамилия" value="">
         </p>
         <p>
-          <label class="visually-hidden" for="feedback-email">Почта</label>
-          <input type="email" name="feedback-email" id="feedback-email" placeholder="email@example.com">
+          <label class="visually-hidden" for="feedback-email">Email</label>
+          <input class="form-control" id="feedback-email" type="email" name="email" placeholder="email@example.com">
         </p>
         <p>
-          <label class="visually-hidden" for="feedback-comment">Комментарий</label>
-          <textarea name="feedback-comment" id="feedback-comment" rows="5" placeholder="В свободной форме"></textarea>
+          <label class="visually-hidden" for="feedback-description">Описание</label>
+          <textarea class="form-control" id="feedback-description" name="description"
+            placeholder="В свободной форме"></textarea>
         </p>
-        <button type="submit">Отправить</button>
+        <p>
+          <button class="button" type="submit">Отправить</button>
+        </p>
       </form>
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
   </div>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>
