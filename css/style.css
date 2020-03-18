@@ -710,7 +710,7 @@ input[type="radio"].visually-hidden {
 
 .catalog {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  padding-bottom: 27px;
+  padding-bottom: 29px;
   margin-bottom: 18px;
 }
 
@@ -769,7 +769,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-list {
-  margin-bottom: 44px;
+  margin-bottom: 42px;
 }
 
 .bestseller-item,
@@ -826,14 +826,6 @@ input[type="radio"].visually-hidden {
   display: block;
   z-index: 10;
 }
-
-/* .bestseller-item:hover,
-.catalog-item:hover {
-  z-index: 200;
-  border-radius: 5px;
-  background-color: rgba(248, 247, 244, 0.2);
-  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-} */
 
 /* ПРЕИМУЩЕСТВА */
 
@@ -1005,7 +997,7 @@ input[type="radio"].visually-hidden {
   width: 80px;
   height: 140px;
   top: 32%;
-  left: 25%;
+  left: 32%;
   z-index: 10;
 }
 
@@ -1463,17 +1455,17 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination-item {
-  margin-left: 1px;
-  outline: 1px solid grey;
+  margin-left: 3px;
+  width: 25px;
 }
 
 .pagination-item a {
   display: block;
   width: 27px;
-  height: 26px;
+  height: 27px;
 
   font-size: 16px;
-  line-height: 26px;
+  line-height: 27px;
   font-weight: 500;
   color: #ffffff;
 
@@ -1497,16 +1489,25 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
 }
 
-.pagination-item-back a,
-.pagination-item-next a {
+.pagination-item-back,
+.pagination-item-next {
   position: relative;
 }
 
-.pagination-item svg {
+.back-disabled svg {
   position: absolute;
-  top: 50%;
+  top: 47%;
+  left: -2px;
+  fill: rgba(255, 255, 255, 0.2);
+  transform: scaleX(-1) translate(-50%,-50%);
+  cursor: default;
+}
+
+.pagination-item-next svg {
+  position: absolute;
+  top: 47%;
+  right: -3px;
   transform: translate(-50%,-50%);
-  display: inline-block;
   width: 8px;
   height: 12px;
 }
@@ -1518,13 +1519,6 @@ input[type="radio"].visually-hidden {
 .pagination-item-next a:focus,
 .pagination-item-next a:active {
   background-color: transparent;
-}
-
-.back-disabled svg {
-  fill: rgba(255, 255, 255, 0.2);
-  transform: scaleX(1);
-  transform: scaleX(-1);
-  cursor: default;
 }
 
 /* ПОДВАЛ */
