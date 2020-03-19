@@ -220,6 +220,7 @@ input[type="radio"].visually-hidden {
 
 .user-navigation-item>a {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   font-size: 14px;
@@ -506,6 +507,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .popup-login .button {
@@ -603,6 +605,7 @@ input[type="radio"].visually-hidden {
 .wrapper-button-cart {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .shopping-cart .button {
@@ -744,6 +747,7 @@ input[type="radio"].visually-hidden {
 
 .raspberry-stock {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   width: 560px;
   margin-right: 26px;
@@ -756,6 +760,7 @@ input[type="radio"].visually-hidden {
 
 .chocolate-stock {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   width: 560px;
   padding: 16px 19px;
@@ -1534,6 +1539,7 @@ input[type="radio"].visually-hidden {
 
 .pagination-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   padding: 0;
   margin: 0;
@@ -1622,6 +1628,7 @@ input[type="radio"].visually-hidden {
 .footer .container,
 .inner-page .footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
 }
 
