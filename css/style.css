@@ -498,6 +498,34 @@ input[type="radio"].visually-hidden {
   color: #999999;
 }
 
+.search-form input::-webkit-input-placeholder, .login-form input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #999999;
+}
+
+.search-form input::-moz-placeholder, .login-form input::-moz-placeholder {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #999999;
+}
+
+.search-form input:-ms-input-placeholder, .login-form input:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #999999;
+}
+
+.search-form input::-ms-input-placeholder, .login-form input::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #999999;
+}
+
 .search-form input::placeholder,
 .login-form input::placeholder {
   font-size: 14px;
@@ -2197,6 +2225,26 @@ input[type="radio"].visually-hidden {
 
 .feedback-form input::-ms-input-placeholder,
 .feedback-form textarea::-ms-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+
+.feedback-form input::-webkit-input-placeholder, .feedback-form textarea::-webkit-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+
+.feedback-form input::-moz-placeholder, .feedback-form textarea::-moz-placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+
+.feedback-form input:-ms-input-placeholder, .feedback-form textarea:-ms-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+
+.feedback-form input::-ms-input-placeholder, .feedback-form textarea::-ms-input-placeholder {
   font-weight: 400;
   color: #999999;
 }
